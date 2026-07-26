@@ -86,8 +86,8 @@ python ai_sales_intelligence_platform.py
 - Multi-Store Analytics
 
 ## Author
-*ChetanayBuilder building AI products  and documenting the journey through real world projects.
+*ChetanayBuilder 
 
-**Chetanay Batra**
+......................>
 
 Building AI products and documenting the journey through real-world projects.
