@@ -86,8 +86,6 @@ python ai_sales_intelligence_platform.py
 - Multi-Store Analytics
 
 ## Author
-*ChetanayBuilder 
+*ChetanayBuilder*
+Building AI products and documenting the journey through real-world projects btw 16 years old.
 
-......................>
-
-Building AI products and documenting the journey through real-world projects.
