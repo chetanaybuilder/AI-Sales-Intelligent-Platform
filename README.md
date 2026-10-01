@@ -1,91 +1,109 @@
 # AI Sales Intelligence Platform
 
-An AI-powered E-Commerce Sales Intelligence Platform that analyzes sales data and provides business insights using Python, Pandas, and Google's Gemini AI.
+![Python Badge](https://img.shields.io/badge/Python-3.9%2B-blue)
+![License MIT](https://img.shields.io/badge/License-MIT-green)
+![CI Workflow](https://github.com/chetanaybuilder/AI-Sales-Intelligent-Platform/actions/workflows/ci.yml/badge.svg)
 
-## Features
+> Enterprise E-Commerce Sales Intelligence Platform that analyzes sales data and provides actionable business insights using Python, Pandas, and Google's Gemini AI.
 
-- Analyze E-Commerce sales CSV files
-- Calculate Total Revenue
-- Calculate Total Profit
-- Find Best Selling Product
-- Find Worst Selling Product
-- Show Top 3 Best Selling Products
-- Category-wise Revenue Analysis
-- Category-wise Profit Analysis
-- Total Orders Analysis
-- Average Order Value
-- Most Sold & Least Sold Products
-- Interactive AI Business Consultant
-- Business recommendations powered by Gemini AI
+## 🚀 Features
 
-## Tech Stack
+- **Automated Data Analysis**: Instantly load and validate E-commerce sales CSV files.
+- **KPI Engine**: Calculates total revenue, profit, average order value (AOV), and unit volume.
+- **Product Rankings**: Identifies best/worst selling products and top performers.
+- **Category Insights**: Breaks down revenue and profit by product category.
+- **AI Business Consultant**: Interactive terminal chat powered by Gemini AI to answer business queries using your actual data.
 
-- Python 3
-- Pandas
-- Google Gemini API
-- VS Code
+## 🛠️ Tech Stack
 
-## How It Works
+- **Core**: Python 3.9+
+- **Data Processing**: Pandas
+- **AI Integration**: Google GenAI SDK (Gemini 2.5)
+- **Quality Assurance**: Pytest (Testing), Ruff (Linting & Formatting)
 
-1. Load the E-Commerce sales CSV.
-2. Calculate important business KPIs.
-3. Display a Business Intelligence Dashboard.
-4. Ask business questions in natural language.
-5. Gemini AI answers using the analyzed sales data.
+## 🏗️ Architecture
 
-## Example Questions
-
-- Which product performs the best?
-- Which category generates the highest profit?
-- How can I increase revenue?
-- Which products should I promote?
-- What inventory strategy should I follow?
-- Why is one product underperforming?
-
-## Project Structure
-
-```
-AI-Sales-Intelligence-Platform/
-│
-├── ai_sales_intelligence_platform.py
-├── sales.csv
-├── requirements.txt
-├── README.md
-└── screenshots/
+```mermaid
+graph TD
+    A[sales.csv] -->|Loads| B(Data Loader)
+    B -->|Validates| C(Analytics Engine)
+    C -->|Computes KPIs| D[Dashboard Report]
+    C -->|Context Summary| E(AI Advisor)
+    E <-->|Generates Insights| F[Gemini API]
+    F -->|Natural Language| G(Interactive CLI Chat)
 ```
 
-## Installation
+## ⚙️ Installation
 
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/chetanaybuilder/AI-Sales-Intelligent-Platform.git
+   cd AI-Sales-Intelligent-Platform
+   ```
+
+2. Create a virtual environment and install dependencies:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   pip install -e .
+   ```
+
+3. Configure your API key:
+   ```bash
+   cp .env.example .env
+   # Edit .env and add your Google Gemini API Key
+   ```
+
+## 💻 Quick Start & CLI Examples
+
+The application installs a `sales-ai` command line tool:
+
+1. **View Dashboard**:
+   ```bash
+   sales-ai --file data/sample_sales.csv dashboard
+   ```
+
+2. **Ask a Single Question**:
+   ```bash
+   sales-ai ask "Which products should I bundle to increase revenue?"
+   ```
+
+3. **Interactive AI Consultant Chat**:
+   ```bash
+   sales-ai chat
+   ```
+
+## 📊 Example Questions for AI
+
+- *Which product performs the best?*
+- *Which category generates the highest profit margin?*
+- *How can I increase overall revenue based on these metrics?*
+- *What inventory strategy should I follow for my worst sellers?*
+
+## 🧪 Testing
+
+To run the test suite using pytest:
 ```bash
-git clone https://github.com/chetanaybuilder/AI-Sales-Intelligence-Platform.git
+pip install -e .[dev]
+pytest tests/
 ```
 
-```bash
-cd AI-Sales-Intelligence-Platform
-```
+## 🗺️ Roadmap & Future Improvements
 
-```bash
-pip install -r requirements.txt
-```
+- Streamlit Web Dashboard integration
+- Sales Forecasting and Trend Analysis
+- PDF / Excel Report Generation
+- Customer Segmentation Engine
 
-## Run
+## 🤝 Contributing
 
-```bash
-python ai_sales_intelligence_platform.py
-```
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
 
-## Future Improvements
+## 👤 Author
 
-- Streamlit Web Dashboard
-- Sales Forecasting
-- PDF Report Generation
-- Excel File Support
-- Interactive Charts
-- Customer Segmentation
-- Inventory Prediction
-- Multi-Store Analytics
+**Chetanay Batra**
+Building AI products and documenting the journey through real-world projects.
 
-## Author
-*ChetanayBuilder*
-Building AI products and documenting the journey through real-world projects btw 16 years old.
+## 📄 License
 
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
